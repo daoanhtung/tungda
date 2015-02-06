@@ -1,0 +1,17 @@
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Service.dll.config
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Service.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Service.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.DataAccess.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Domain.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Utils.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Resx.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\System.Web.Mvc.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\log4net.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.DataAccess.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Domain.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Utils.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\BrevisOnline.Resx.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\bin\Debug\System.Web.Mvc.xml
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\obj\Debug\BrevisOnline.Service.csprojResolveAssemblyReference.cache
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\obj\Debug\BrevisOnline.Service.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Service\obj\Debug\BrevisOnline.Service.pdb

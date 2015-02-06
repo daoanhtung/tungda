@@ -1,0 +1,17 @@
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\bin\Debug\BrevisOnline.Resx.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\bin\Debug\BrevisOnline.Resx.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsShowHistory.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsHomePage.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsInternalLanding.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsCommon.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsCustomer.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsCustomerCommentResult.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsInternalTerminatorComment.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsPlumber.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsReport.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsServiceOrder.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.RsWarrantyRegDetail.resources
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.csproj.GenerateResource.Cache
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Resx\obj\Debug\BrevisOnline.Resx.csprojResolveAssemblyReference.cache
