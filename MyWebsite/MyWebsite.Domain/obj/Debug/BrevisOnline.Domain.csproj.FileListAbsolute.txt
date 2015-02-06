@@ -1,0 +1,10 @@
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\bin\Debug\BrevisOnline.Domain.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\bin\Debug\BrevisOnline.Domain.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\bin\Debug\BrevisOnline.Resx.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\bin\Debug\BrevisOnline.Utils.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\bin\Debug\log4net.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\bin\Debug\BrevisOnline.Resx.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\bin\Debug\BrevisOnline.Utils.pdb
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\obj\Debug\BrevisOnline.Domain.csprojResolveAssemblyReference.cache
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\obj\Debug\BrevisOnline.Domain.dll
+D:\Brevis\dev\BrevisOnline\BrevisOnline.Domain\obj\Debug\BrevisOnline.Domain.pdb

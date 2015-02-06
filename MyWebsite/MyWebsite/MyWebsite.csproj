@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{234D2321-1B44-45AD-8182-17ED9100347F}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyWebsite</RootNamespace>
+    <AssemblyName>MyWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MyWebsite.Business">
+      <HintPath>..\MyWebsite.Business\bin\Debug\MyWebsite.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="MyWebsite.Domain">
+      <HintPath>..\MyWebsite.Domain\bin\Debug\MyWebsite.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="MyWebsite.Ioc">
+      <HintPath>..\MyWebsite.Ioc\bin\Debug\MyWebsite.Ioc.dll</HintPath>
+    </Reference>
+    <Reference Include="MyWebsite.Resx">
+      <HintPath>..\MyWebsite.Resx\bin\Debug\MyWebsite.Resx.dll</HintPath>
+    </Reference>
+    <Reference Include="MyWebsite.Utils">
+      <HintPath>..\MyWebsite.Utils\bin\Debug\MyWebsite.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BottomMenuController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SliderController.cs" />
+    <Compile Include="Controllers\TopMenuController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BottomMenuViewModel.cs" />
+    <Compile Include="Models\SliderViewModel.cs" />
+    <Compile Include="Models\TopMenuViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\images\banner\banner_02.jpg" />
+    <Content Include="Content\images\banner\banner_03.jpg" />
+    <Content Include="Content\images\banner\bs02.jpg" />
+    <Content Include="Content\images\banner\features_02.jpg" />
+    <Content Include="Content\images\banner\features_05.jpg" />
+    <Content Include="Content\images\banner\unique_magento_theme.jpg" />
+    <Content Include="Content\images\black.jpg" />
+    <Content Include="Content\images\button\button.png" />
+    <Content Include="Content\images\footer\footer_banner_1.png" />
+    <Content Include="Content\images\footer\footer_banner_2.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column.htm" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\4b4a7e4dfbab83bf208f8b38d1e761f7.css" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\5qRsDHx8NJc.htm" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\5qRsDHx8NJc_data\html5player.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\5qRsDHx8NJc_data\www-embed-player-vflMDuNdu.css" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\5qRsDHx8NJc_data\www-embed-player.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\5qRsDHx8NJc_data\XK1Wmv1w0DW2pGZQiuauyJFq6_RKmUyI09l1c9PyGCs.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\ajax-loader.gif" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\b132f314d295a8e9f7c0f471ef455787.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\banner_02.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\banner_03.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big01.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big01_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big02_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big03.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big03_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big05.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big05_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big06.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\big06_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\black.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\bs02.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\button.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\css.css" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\e98eae5ed066dd30bf3c1d66b6aa8c54.css" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\features_02.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\features_05.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\footer_banner_1.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\footer_banner_2.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\ga.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\i01.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\i02.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\i03.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\img_01.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\img_02.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\jquery.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\jquery_002.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox.htm" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\10372250_893922403970438_9045935877639559914_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\10389020_615157558598794_5790052682733747004_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\10409725_687945787926218_3852775775384145334_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\10492175_10203094070850293_7871209701315532223_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\10517515_10203421719161443_3815699736049328834_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\10626471_841062945945921_6570243374141683819_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\10646850_1526046474304598_2602979961030448015_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\250787_4287461234531_1958921593_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\563774_353465128088399_1144634513_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\923404_476881952381513_1374630992_n.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\likebox_data\NslwlGvDXYa.js" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\liquidfolio_wordpress.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\logitech-cordless-optical-trackman.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\logo_2.png" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\microsoft-wireless-optical-mouse-5000.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\options.css" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\player_api" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\pro04_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\pro04_1_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod01.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod01_3.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod02_2.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod02_2_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod03_2_1.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod05.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod05_2.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod06.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\prod06_2.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\shopper_magento.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\unique_magento_theme.jpg" />
+    <Content Include="Content\images\footer\Shopper Home page - right column_files\www-widgetapi.js" />
+    <Content Include="Content\images\icon\ajax-loader.gif" />
+    <Content Include="Content\images\icon\apple-touch-icon-114x114.png" />
+    <Content Include="Content\images\icon\apple-touch-icon-72x72.png" />
+    <Content Include="Content\images\icon\apple-touch-icon.png" />
+    <Content Include="Content\images\icon\en.png" />
+    <Content Include="Content\images\icon\favicon.ico" />
+    <Content Include="Content\images\icon\icon_trash.png" />
+    <Content Include="Content\images\icon\i_asc_arrow.gif" />
+    <Content Include="Content\images\icon\i_desc_arrow.gif" />
+    <Content Include="Content\images\icon\shop_icon.png" />
+    <Content Include="Content\images\icon\vi.jpg" />
+    <Content Include="Content\images\logo\EN.jpg" />
+    <Content Include="Content\images\logo\logo.png" />
+    <Content Include="Content\images\logo\sitecore_0.png" />
+    <Content Include="Content\images\logo\VI.png" />
+    <Content Include="Content\images\product\clothes\img_01.png" />
+    <Content Include="Content\images\product\clothes\img_02.png" />
+    <Content Include="Content\images\product\clothes\prod06.jpg" />
+    <Content Include="Content\js\jquery.themepunch.plugins.min.js" />
+    <Content Include="Content\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Content\js\prototype.js" />
+    <Content Include="Content\js\UserDefine\TopMenu.js" />
+    <Content Include="Content\style\all.css" />
+    <Content Include="Content\style\options.css" />
+    <Content Include="Content\style\print.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\TopMenu\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Slider\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\BottomMenu\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54499/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

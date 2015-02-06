@@ -1,0 +1,3 @@
+ERROR 10 BrivisLogWriteFile - The operation has timed out
+ERROR 10 BrivisLogWriteFile - Value cannot be null.
+Parameter name: input
