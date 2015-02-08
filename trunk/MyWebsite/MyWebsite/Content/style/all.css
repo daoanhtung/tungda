@@ -2012,7 +2012,7 @@ footer address{ margin-left:10px; }
 
 /* 1st Level */
 .queldoreiNav>li { float:left; position:relative; margin:0 3px 3px;}
-.queldoreiNav>li>a { position:relative; float:left; padding:0; color:#373230; font-size:14px; font-family:"Myriad Pro",sans-serif; font-weight:700; line-height:36px; letter-spacing:-0.1em; text-transform:uppercase; }
+.queldoreiNav>li>a { position:relative; float:left; padding:0; color:#373230; font-size:16px; font-family:"Myriad Pro",sans-serif; font-weight:700; line-height:36px; letter-spacing:-0.1em; text-transform:uppercase; }
 .queldoreiNav>li>a>span{padding:0px 10px; border-top:3px solid transparent;}
 .queldoreiNav>li:hover>a>span,
 .queldoreiNav>li.over>a>span,

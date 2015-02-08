@@ -24,13 +24,13 @@
                                     {
                                         <li>
                                             <a class="selected" style="background-image: url('@Url.Content(language.Image)');" 
-                                                     href="@Common.ChangeLanguage(Request.Url.AbsoluteUri, language.Value)"></a>
+                                                     href="@Common.ChangeLanguage(Request.Url.AbsoluteUri, language.Value)">@language.Text</a>
                                         </li>
                                     }else
                                     {
                                         <li>
                                             <a style="background-image: url('@Url.Content(language.Image)');" 
-                                                     href="@Common.ChangeLanguage(Request.Url.AbsoluteUri, language.Value)"></a>
+                                                     href="@Common.ChangeLanguage(Request.Url.AbsoluteUri, language.Value)">@language.Text</a>
                                         </li>
                                     }
                                 }
@@ -112,7 +112,7 @@
                     <div class="nav-container">
                         <div class="nav-top-title">
                             <div class="icon"><span></span><span></span><span></span></div>
-                            <a href="#">Navigation</a>
+                            <a href="#">@RsCommon.Navigation</a>
                         </div>
                         <ul id="queldoreiNav" class="queldoreiNav">
                         </ul>

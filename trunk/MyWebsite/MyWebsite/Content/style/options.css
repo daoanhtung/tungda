@@ -46,7 +46,7 @@ nav .nav-top-title, .nav-container .nav-top-title,
 .data-table td.td-name h2,
 .product-slider-container h2,
 .block-slider .slides > li strong,
-.cms-index-index .block-slider .slides > li strong {font-family:"Open Sans"}
+.cms-index-index .block-slider .slides > li strong {font-family:"Myriad Pro",sans-serif}
 /**~~ Theme Color ~~**/
 a.button span,button.button span,
 button.invert:hover span, button.btn-continue:hover span, .cart-shipping button:hover span, .cart-coupon button:hover span,

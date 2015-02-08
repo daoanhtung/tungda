@@ -12514,12 +12514,12 @@ jQuery(function($){
     var config = {
         over: function(){
             if (mobile) return;
-            $('.cart-top-container .details').animate({opacity:1, height:'toggle'}, 200);
+            $('.cart-top-container .details').show();
         },
         timeout: 200, // number = milliseconds delay before onMouseOut
         out: function(){
             if (mobile) return;
-            $('.cart-top-container .details').animate({opacity:0, height:'toggle'}, 200);
+            $('.cart-top-container .details').hide();
         }
     };
     $("div.cart-top-container").hoverIntent( config );
@@ -12528,12 +12528,12 @@ jQuery(function($){
     var config = {
         over: function(){
             if (mobile) return;
-            $('.compare-top-container .details').animate({opacity:1, height:'toggle'}, 200);
+            $('.compare-top-container .details').show();
         },
         timeout: 200, // number = milliseconds delay before onMouseOut
         out: function(){
             if (mobile) return;
-            $('.compare-top-container .details').animate({opacity:0, height:'toggle'}, 200);
+            $('.compare-top-container .details').hide();
         }
     };
     $("div.compare-top-container").hoverIntent( config );
@@ -12551,27 +12551,61 @@ jQuery(function($){
         }
     };
     $("div.search-top-container").hoverIntent( config );
+    $(document).on("mouseenter", '.queldoreiNav li', function () {
+        var docWidth = $(document).width();
+        var div = $(this).children('div');
+        var divWidth = div.actual('width') + parseInt(div.css('padding-left')) * 2 + 30;
 
-    $('.queldoreiNav li').hover(
-        function(){
-            var docWidth = $(document).width();
-            var div = $(this).children('div');
-	        var divWidth = div.actual('width') + parseInt(div.css('padding-left'))*2 + 30;
+        $(this).addClass('over');
+        div.addClass('shown-sub');
 
-            $(this).addClass('over');
-            div.addClass('shown-sub');
-
-            if ( divWidth + $(this).offset().left > docWidth  ) {
-                div.css('left', -($(this).offset().left + divWidth - docWidth)+'px' );
-            } else {
-                div.css('left', '0px');
-            }
-        },
-        function(){
-            $(this).removeClass('over');
-            $(this).children('div').removeClass('shown-sub').css('left', '-10000px');
+        if (divWidth + $(this).offset().left > docWidth) {
+            div.css('left', -($(this).offset().left + divWidth - docWidth) + 'px');
+        } else {
+            div.css('left', '0px');
         }
-    );
+    });
+    $(document).on("mouseleave", '.queldoreiNav li', function () {
+        $(this).removeClass('over');
+        $(this).children('div').removeClass('shown-sub').css('left', '-10000px');
+    });
+    $(document).on("mouseenter", '.fullwidthbanner-container', function () {
+        $(".tp-leftarrow").css({
+            opacity: 1
+        });
+        $(".tp-rightarrow").css({
+            opacity: 1
+        });
+    });
+    $(document).on("mouseleave", '.fullwidthbanner-container', function () {
+        $(".tp-leftarrow").css({
+            opacity: 0
+        });
+        $(".tp-rightarrow").css({
+            opacity: 0
+        });
+    });
+
+    //$('.queldoreiNav li').hover(
+    //    function(){
+    //        var docWidth = $(document).width();
+    //        var div = $(this).children('div');
+	//        var divWidth = div.actual('width') + parseInt(div.css('padding-left'))*2 + 30;
+
+    //        $(this).addClass('over');
+    //        div.addClass('shown-sub');
+
+    //        if ( divWidth + $(this).offset().left > docWidth  ) {
+    //            div.css('left', -($(this).offset().left + divWidth - docWidth)+'px' );
+    //        } else {
+    //            div.css('left', '0px');
+    //        }
+    //    },
+    //    function(){
+    //        $(this).removeClass('over');
+    //        $(this).children('div').removeClass('shown-sub').css('left', '-10000px');
+    //    }
+    //);
 
     //fix grid items height
     function fixGridHeight() {
@@ -12605,18 +12639,13 @@ jQuery(function($){
             } else {
                 $(this).addClass('over');
             }
-            $('.header-dropdown', this).animate({opacity:1, height:'toggle'}, 100);
+            $('.header-dropdown').show();
         },
         timeout: 0, // number = milliseconds delay before onMouseOut
         out: function(){
             var that = this;
-            $('.header-dropdown', this).animate({opacity:0, height:'toggle'}, 100, function(){
-                if ($(this).hasClass('.header-dropdown')){
-                    $(that).parent().removeClass('over');
-                } else {
-                    $(that).removeClass('over');
-                }
-            });
+            $(that).removeClass('over');
+            $('.header-dropdown').hide();
         }
     };
     $('.header-switch, .header-switch .header-dropdown').hoverIntent( config );

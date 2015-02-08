@@ -1,0 +1,217 @@
+﻿@using System.Globalization
+@using MyWebsite.Resx
+@using MyWebsite.Utils
+@model MyWebsite.Models.TopMenuViewModel
+<!-- HEADER BOF -->
+<div class="header-container">
+    <div class="top-switch-bg">
+        <div class="row clearfix">
+            <div class="grid_6">
+                <!-- LANGUAGES BOF -->
+                <div class="header-switch language-switch">
+                    <span>
+                        @RsCommon.Language
+                        <span class="current">@CultureInfo.CurrentCulture.NativeName
+                        </span>
+                    </span>
+                    <div class="header-dropdown">
+                        <ul id="ulLanguage" runat="server">
+                            @{
+                                var languageList = SelectListLanguage.GetList();
+                                foreach(var language in languageList)
+                                {
+                                    if (language.Value==CultureInfo.CurrentCulture.IetfLanguageTag)
+                                    {
+                                        <li>
+                                            <a class="selected" style="background-image: url('@Url.Content(language.Image)');" 
+                                                     href="@Common.ChangeLanguage(Request.Url.AbsoluteUri, language.Value)"></a>
+                                        </li>
+                                    }else
+                                    {
+                                        <li>
+                                            <a style="background-image: url('@Url.Content(language.Image)');" 
+                                                     href="@Common.ChangeLanguage(Request.Url.AbsoluteUri, language.Value)"></a>
+                                        </li>
+                                    }
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="language-select">
+                    <span>Language:</span>
+                    <select name="language_switch" onchange="window.location=this.value" id="ddlLanguage">
+                    </select>
+                </div>
+                <!-- LANGUAGES EOF -->
+            </div>
+            <div class="grid_6">
+                <ul class="links">
+                    <li><a href="@Common.GetAppStr("AccountPage")" title="Account">
+                            @RsCommon.PersonalPage
+                        </a>
+                    </li>
+                    <li class="separator">&nbsp;</li>
+                    <li><a href="@Common.GetAppStr("WishlistPage")" title="Wishlist">
+                            @RsCommon.WishlistPage (
+                            @if (Session[Constants.WishListCountSessionKey]==null)
+                            {
+                                @Constants.Zero
+                            }else
+                            {
+                                @Session[Constants.WishListCountSessionKey]
+                            }
+                            )
+                        </a>
+                    </li>
+                    <li class="separator">&nbsp;</li>
+                    <li><a href="@Common.GetAppStr("CheckoutPage")" title="Checkout" class="top-link-checkout">
+                            @RsCommon.CheckoutPage
+                        </a>
+                    </li>
+                    <li class="separator">&nbsp;</li>
+                    @if(Session[Constants.UserNameSessionKey]==null)
+                    {
+                        <li id="login">
+                            <a href="@Common.GetAppStr("LoginPage")" title="Log In">
+                                @RsCommon.LoginPage
+                            </a>
+                        </li>
+                        <li id="seperator" class="separator">&nbsp;</li>
+                        <li id="signup">
+                            <a href="@Common.GetAppStr("SignUpPage")">
+                                @RsCommon.SignUpPage
+                            </a>
+                        </li>
+                    }else
+                    {
+                        <li id="logout">
+                            <a href="@Common.GetAppStr("LogoutPage")">
+                                @RsCommon.LogoutPage
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-wrapper search-field">
+        <header>
+            <div class="row clearfix">
+                <div class="grid_12 ">
+                    <h1 class="logo">
+                        <strong>@RsCommon.Logo_Title</strong>
+                        <a href="/" title="@RsCommon.Logo_Title" class="logo">
+                            <p>                                                                             
+                                <img src="@Url.Content("~/Content/images/logo/logo.png")" width="194" height="33" class="retina" alt="@RsCommon.Logo_Title" />
+                            </p>
+                        </a>
+                    </h1>
+                    <!-- NAVIGATION -->
+                    <!-- navigation BOF -->
+                    <div class="nav-container">
+                        <div class="nav-top-title">
+                            <div class="icon"><span></span><span></span><span></span></div>
+                            <a href="#">Navigation</a>
+                        </div>
+                        <ul id="queldoreiNav" class="queldoreiNav">
+                        </ul>
+                    </div>
+                    <!-- navigation EOF -->
+                    <!-- NAVIGATION EOF -->
+                    <div class="top-dropdowns">
+                        <!-- cart BOF -->
+                        <div class="cart-top-title">
+                            <a href="@Common.GetAppStr("ShoppingCartPage")" class="clearfix"><span class="icon"></span></a>
+                        </div>
+                        <div class="cart-top-container">
+                            <div class="cart-top">
+                                <a class="summary" href="@Common.GetAppStr("ShoppingCartPage")">
+                                    <span>
+                                        @RsCommon.Bag (
+                                        @if(Session[Constants.TotalProductCountSessionKey]==null)
+                                        {
+                                            @Constants.Zero
+                                        }else
+                                        {
+                                            @Session[Constants.TotalProductCountSessionKey].ToString()
+                                        }
+                                        )
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="details">
+                                <div class="details-border"></div>
+                                <p class="a-center" id="NoItemInCart">
+                                    @RsCommon.NoItemInCart
+                                </p>
+                                <p id="HaveItemInCart">
+                                    <p class="block-subtitle text-recently">
+                                        @RsCommon.RecentlyAdd
+                                    </p>
+                                
+                                    <ol id="cart-sidebar" class="mini-products-list">
+                                        
+                                    </ol>
+                                    <div class="subtotal-wrapper">
+                                        <div class="subtotal">
+                                            <span class="label">
+                                                @RsCommon.TotalInCart
+                                            </span> 
+                                            <span class="price">@RsCommon.Currency
+                                                @if (Session[Constants.TotalPriceSessionKey] == null)
+                                                {
+                                                    @Constants.Zero
+                                                }else
+                                                {
+                                                    @Session[Constants.TotalPriceSessionKey].ToString()
+                                                }
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="buttons clearfix">
+                                        <button type="button" title="View Cart" class="button btn-continue" onclick="setLocation('@Common.GetAppStr("ShoppingCartPage")')"><span><span>@RsCommon.ViewCart</span></span></button>
+                                        <button type="button" title="Checkout" class="button btn-checkout" onclick="setLocation('@Common.GetAppStr("CheckoutPage")')"><span><span>@RsCommon.ContinueToCheckOut</span></span></button>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- cart EOF -->
+                        <div class="compare-top-title">
+                            <a href="#" class="clearfix" onclick="popWin('@Common.GetAppStr("ComparePage")','compare','top:0,left:0,width=820,height=600,resizable=yes,scrollbars=yes')"><span class="icon"></span>@RsCommon.Compare</a>
+                        </div>
+                        <div class="compare-top-container">
+                            <div class="compare-top">
+                                <a class="summary" href="#" onclick="popWin('@Common.GetAppStr("ComparePage")','compare','top:0,left:0,width=820,height=600,resizable=yes,scrollbars=yes')"></a>
+                            </div>
+                            <div class="details" id="NoProductToCompare">
+                                <div class="details-border"></div>
+                                <p class="empty">@RsCommon.NoItemToCompare</p>
+                            </div>
+                            <div style="display: none; opacity: 0;" class="details" id="Compare">
+                                <div class="details-border"></div>
+                                <ol id="compare-items-top">
+                                </ol>
+                                <div class="actions">
+                                    <button type="button" title="Compare" class="button" onclick="popWin('@Common.GetAppStr("ComparePage")')"><span><span>@RsCommon.Compare</span></span></button>
+                                    <div class="f-right">
+                                        <a id="btnClear" onclick="TopMenu.ClearCompare()">@RsCommon.ClearCompare</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-top-container">
+                            <div class="form-search">
+                                <input type="text" id="txtQuery" onkeypress="TopMenu.Search()" class="input-text searchTextbox" placeholder="@RsCommon.SearchBox_PlaceHolder"/>
+                                <a id="btnSearch" onclick="TopMenu.Search()"></a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!-- HEADER EOF -->
+

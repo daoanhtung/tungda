@@ -5,11 +5,20 @@
     <div class="fullwidthbanner-container">
         <div class="fullwidthbanner">
             <ul>
-                @foreach(var slider in Model.Sliders)
+                @foreach (var slider in Model.Sliders)
                 {
-                    <li data-transition="@slider.TransitionStyle" data-masterspeed="@slider.TransitionSpeed" data-slotamount="@slider.SlotAmount" data-link="@slider.Link">
-                        @Html.Raw(slider.Html)
-                    </li>
+                    if (!String.IsNullOrEmpty(slider.Link))
+                    {
+                        <li data-transition="@slider.TransitionStyle" data-masterspeed="@slider.TransitionSpeed" data-slotamount="@slider.SlotAmount" data-link="@slider.Link">
+                            @Html.Raw(slider.Html)
+                        </li>
+                    }
+                    else
+                    {
+                        <li data-transition="@slider.TransitionStyle" data-masterspeed="@slider.TransitionSpeed" data-slotamount="@slider.SlotAmount">
+                            @Html.Raw(slider.Html)
+                        </li>
+                    }
                 }
             </ul>
             <div class="tp-bannertimer tp-top"></div>
