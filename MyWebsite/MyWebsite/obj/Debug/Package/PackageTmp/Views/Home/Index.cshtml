@@ -1,0 +1,15 @@
+﻿@using MyWebsite.Resx
+@{
+    ViewBag.Title = RsCommon.HomePage;
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section Scripts {
+    <script src="@Url.Content("~/Content/js/UserDefine/TopMenu.js")"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            TopMenu.init();
+        });
+    </script>
+}

@@ -4,3 +4,9 @@ C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\MyWebsite\MyWebsite.Unit
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\MyWebsite\MyWebsite.UnitTest\obj\Debug\MyWebsite.UnitTest.dll
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\MyWebsite\MyWebsite.UnitTest\obj\Debug\MyWebsite.UnitTest.pdb
 C:\Users\Anh Tung\documents\visual studio 2012\Projects\MyWebsite\MyWebsite.UnitTest\obj\Debug\MyWebsite.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.UnitTest\bin\Debug\MyWebsite.UnitTest.dll.config
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.UnitTest\bin\Debug\MyWebsite.UnitTest.dll
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.UnitTest\bin\Debug\MyWebsite.UnitTest.pdb
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.UnitTest\obj\Debug\MyWebsite.UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.UnitTest\obj\Debug\MyWebsite.UnitTest.dll
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.UnitTest\obj\Debug\MyWebsite.UnitTest.pdb

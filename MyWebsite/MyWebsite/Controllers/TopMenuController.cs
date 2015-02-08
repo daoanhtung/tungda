@@ -55,10 +55,10 @@ namespace MyWebsite.Controllers
             return PartialView(Entity);
         }
 
-        public JsonResult GetMenu()
+        public JsonResult GetMenu(string url)
         {
             var menu = String.Empty;
-            var currentUrl = Request.Url.AbsolutePath;
+            var currentUrl = url;
             var listMenuLevel1 = _menuManager.SelectActive().Where(x => x.ParentMenuId == 0).ToList();
             for (int i = 0; i < listMenuLevel1.Count; i++)
             {
@@ -160,7 +160,7 @@ namespace MyWebsite.Controllers
                                     "\"><span>",
                                     listMenuLevel3[k].MenuText,
                                     "</span></a>");
-                                menu += GenerateMenuLevel3(listMenuLevel3[k]);
+                                menu += GenerateMenuLevel3(listMenuLevel3[k],currentUrl);
                                 menu += "</li>";
                             }
                             menu += "</ul></div>";
@@ -179,10 +179,10 @@ namespace MyWebsite.Controllers
         }
 
         //Recursive generate menu equal or above level 3
-        private string GenerateMenuLevel3(MenuResult currentItem)
+        private string GenerateMenuLevel3(MenuResult currentItem, string url)
         {
             var menu = String.Empty;
-            var currentUrl = Request.Url.AbsolutePath;
+            var currentUrl = url;
             var listMenu = _menuManager.SelectActive().Where(x => x.ParentMenuId == currentItem.MenuId).ToList();
             if (listMenu.Count > 0)
             {
@@ -210,7 +210,7 @@ namespace MyWebsite.Controllers
                         "\"><span>",
                         listMenu[k].MenuText,
                         "</span></a>");
-                    menu += GenerateMenuLevel3(listMenu[k]);
+                    menu += GenerateMenuLevel3(listMenu[k],currentUrl);
                     menu += "</li>";
                 }
                 menu += "</ul></div>";

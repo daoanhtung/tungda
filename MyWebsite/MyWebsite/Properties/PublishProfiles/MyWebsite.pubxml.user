@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Debug</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>12/27/2014 17:34:05</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>12/27/2014 17:34:06</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/27/2014 17:34:09</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Business.dll">
+      <publishTime>02/06/2015 00:38:38</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Business.pdb">
+      <publishTime>02/06/2015 00:38:38</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.DataAccess.dll">
+      <publishTime>02/06/2015 00:38:36</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.DataAccess.pdb">
+      <publishTime>02/06/2015 00:38:36</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.dll">
+      <publishTime>02/07/2015 17:44:28</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Domain.dll">
+      <publishTime>02/06/2015 00:38:36</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Domain.pdb">
+      <publishTime>02/06/2015 00:38:36</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Ioc.dll">
+      <publishTime>02/06/2015 01:27:00</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Ioc.pdb">
+      <publishTime>02/06/2015 01:27:00</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.pdb">
+      <publishTime>02/07/2015 17:44:28</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Resx.dll">
+      <publishTime>02/06/2015 00:30:07</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Resx.pdb">
+      <publishTime>02/06/2015 00:30:07</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Utils.dll">
+      <publishTime>02/06/2015 00:38:35</publishTime>
+    </File>
+    <File Include="bin/MyWebsite.Utils.pdb">
+      <publishTime>02/06/2015 00:38:35</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/27/2014 17:34:10</publishTime>
+    </File>
+    <File Include="bin/StructureMap.dll">
+      <publishTime>12/27/2014 17:34:13</publishTime>
+    </File>
+    <File Include="bin/StructureMap.pdb">
+      <publishTime>12/27/2014 17:34:14</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>12/27/2014 17:34:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>12/27/2014 17:34:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>12/27/2014 17:34:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>12/27/2014 17:34:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>12/27/2014 17:34:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>12/27/2014 17:34:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>12/27/2014 17:34:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>12/27/2014 17:34:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>12/27/2014 17:34:08</publishTime>
+    </File>
+    <File Include="Content/images/banner/banner_02.jpg">
+      <publishTime>10/24/2014 10:59:28</publishTime>
+    </File>
+    <File Include="Content/images/banner/banner_03.jpg">
+      <publishTime>10/24/2014 10:59:28</publishTime>
+    </File>
+    <File Include="Content/images/banner/bs02.jpg">
+      <publishTime>10/24/2014 10:59:28</publishTime>
+    </File>
+    <File Include="Content/images/banner/features_02.jpg">
+      <publishTime>10/22/2014 15:55:54</publishTime>
+    </File>
+    <File Include="Content/images/banner/features_05.jpg">
+      <publishTime>10/22/2014 15:54:57</publishTime>
+    </File>
+    <File Include="Content/images/banner/unique_magento_theme.jpg">
+      <publishTime>10/22/2014 15:56:21</publishTime>
+    </File>
+    <File Include="Content/images/black.jpg">
+      <publishTime>10/22/2014 15:58:06</publishTime>
+    </File>
+    <File Include="Content/images/button/button.png">
+      <publishTime>10/22/2014 15:55:35</publishTime>
+    </File>
+    <File Include="Content/images/footer/footer_banner_1.png">
+      <publishTime>10/22/2014 16:18:09</publishTime>
+    </File>
+    <File Include="Content/images/footer/footer_banner_2.png">
+      <publishTime>10/22/2014 16:18:21</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column.htm">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/4b4a7e4dfbab83bf208f8b38d1e761f7.css">
+      <publishTime>10/24/2014 11:13:21</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/5qRsDHx8NJc.htm">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/5qRsDHx8NJc_data/html5player.js">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/5qRsDHx8NJc_data/www-embed-player-vflMDuNdu.css">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/5qRsDHx8NJc_data/www-embed-player.js">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/5qRsDHx8NJc_data/XK1Wmv1w0DW2pGZQiuauyJFq6_RKmUyI09l1c9PyGCs.js">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/ajax-loader.gif">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/b132f314d295a8e9f7c0f471ef455787.js">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/banner_02.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/banner_03.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big01.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big01_1.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big02_1.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big03.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big03_1.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big05.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big05_1.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big06.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/big06_1.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/black.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/bs02.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/button.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/css.css">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/e98eae5ed066dd30bf3c1d66b6aa8c54.css">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/features_02.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/features_05.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/footer_banner_1.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/footer_banner_2.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/ga.js">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/i01.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/i02.png">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/i03.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/img_01.png">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/img_02.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/jquery.js">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/jquery_002.js">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox.htm">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/10372250_893922403970438_9045935877639559914_n.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/10389020_615157558598794_5790052682733747004_n.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/10409725_687945787926218_3852775775384145334_n.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/10492175_10203094070850293_7871209701315532223_n.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/10517515_10203421719161443_3815699736049328834_n.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/10626471_841062945945921_6570243374141683819_n.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/10646850_1526046474304598_2602979961030448015_n.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/250787_4287461234531_1958921593_n.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/563774_353465128088399_1144634513_n.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/923404_476881952381513_1374630992_n.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/likebox_data/NslwlGvDXYa.js">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/liquidfolio_wordpress.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/logitech-cordless-optical-trackman.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/logo_2.png">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/microsoft-wireless-optical-mouse-5000.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/options.css">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/player_api">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/pro04_1.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/pro04_1_1.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod01.jpg">
+      <publishTime>10/24/2014 11:13:21</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod01_3.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod02_2.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod02_2_1.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod03_2_1.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod05.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod05_2.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod06.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/prod06_2.jpg">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/shopper_magento.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/unique_magento_theme.jpg">
+      <publishTime>10/24/2014 11:13:23</publishTime>
+    </File>
+    <File Include="Content/images/footer/Shopper Home page - right column_files/www-widgetapi.js">
+      <publishTime>10/24/2014 11:13:22</publishTime>
+    </File>
+    <File Include="Content/images/icon/ajax-loader.gif">
+      <publishTime>10/29/2014 09:21:58</publishTime>
+    </File>
+    <File Include="Content/images/icon/apple-touch-icon-114x114.png">
+      <publishTime>10/22/2014 14:41:50</publishTime>
+    </File>
+    <File Include="Content/images/icon/apple-touch-icon-72x72.png">
+      <publishTime>10/22/2014 14:41:41</publishTime>
+    </File>
+    <File Include="Content/images/icon/apple-touch-icon.png">
+      <publishTime>10/22/2014 14:41:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/en.png">
+      <publishTime>10/22/2014 15:03:21</publishTime>
+    </File>
+    <File Include="Content/images/icon/favicon.ico">
+      <publishTime>10/22/2014 14:41:12</publishTime>
+    </File>
+    <File Include="Content/images/icon/icon_trash.png">
+      <publishTime>11/07/2014 00:23:12</publishTime>
+    </File>
+    <File Include="Content/images/icon/i_asc_arrow.gif">
+      <publishTime>11/03/2014 18:03:28</publishTime>
+    </File>
+    <File Include="Content/images/icon/i_desc_arrow.gif">
+      <publishTime>11/04/2014 09:25:10</publishTime>
+    </File>
+    <File Include="Content/images/icon/shop_icon.png">
+      <publishTime>11/04/2014 09:43:12</publishTime>
+    </File>
+    <File Include="Content/images/icon/vi.jpg">
+      <publishTime>10/23/2014 10:04:48</publishTime>
+    </File>
+    <File Include="Content/images/logo/EN.jpg">
+      <publishTime>05/26/2014 15:04:29</publishTime>
+    </File>
+    <File Include="Content/images/logo/logo.png">
+      <publishTime>10/22/2014 15:29:51</publishTime>
+    </File>
+    <File Include="Content/images/logo/sitecore_0.png">
+      <publishTime>11/05/2014 15:33:45</publishTime>
+    </File>
+    <File Include="Content/images/logo/VI.png">
+      <publishTime>05/26/2014 15:03:59</publishTime>
+    </File>
+    <File Include="Content/images/product/clothes/img_01.png">
+      <publishTime>10/22/2014 15:57:10</publishTime>
+    </File>
+    <File Include="Content/images/product/clothes/img_02.png">
+      <publishTime>10/22/2014 15:57:28</publishTime>
+    </File>
+    <File Include="Content/images/product/clothes/prod06.jpg">
+      <publishTime>10/22/2014 16:03:28</publishTime>
+    </File>
+    <File Include="Content/js/jquery.themepunch.plugins.min.js">
+      <publishTime>10/22/2014 14:46:35</publishTime>
+    </File>
+    <File Include="Content/js/jquery.themepunch.revolution.min.js">
+      <publishTime>10/22/2014 14:47:23</publishTime>
+    </File>
+    <File Include="Content/js/prototype.js">
+      <publishTime>10/24/2014 10:46:06</publishTime>
+    </File>
+    <File Include="Content/js/UserDefine/TopMenu.js">
+      <publishTime>02/05/2015 23:00:21</publishTime>
+    </File>
+    <File Include="Content/style/all.css">
+      <publishTime>11/15/2014 13:05:31</publishTime>
+    </File>
+    <File Include="Content/style/options.css">
+      <publishTime>11/15/2014 11:53:30</publishTime>
+    </File>
+    <File Include="Content/style/print.css">
+      <publishTime>10/22/2014 14:45:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/03/2015 22:21:06</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>02/03/2015 23:54:13</publishTime>
+    </File>
+    <File Include="Views/BottomMenu/Index.cshtml">
+      <publishTime>02/06/2015 00:40:10</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>02/07/2015 17:48:08</publishTime>
+    </File>
+    <File Include="Views/Shared/Layout.cshtml">
+      <publishTime>02/07/2015 17:49:59</publishTime>
+    </File>
+    <File Include="Views/Slider/Index.cshtml">
+      <publishTime>02/06/2015 00:33:06</publishTime>
+    </File>
+    <File Include="Views/TopMenu/Index.cshtml">
+      <publishTime>02/06/2015 01:35:25</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/03/2015 22:21:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/07/2015 17:50:04</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

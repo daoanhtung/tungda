@@ -1,6 +1,6 @@
 ﻿var TopMenu = {
     init: function () {
-        $.get("/TopMenu/GetMenu", function (data) {
+        $.get("/TopMenu/GetMenu?url=" + $("#hidUrl").val(), function (data) {
             if (data != null) {
                 $("#queldoreiNav").html(data);
             }else {
