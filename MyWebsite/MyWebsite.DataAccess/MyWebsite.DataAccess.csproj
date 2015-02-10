@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRepositories\IAdminMenuRepository.cs" />
     <Compile Include="IRepositories\IBottomMenuRepository.cs" />
     <Compile Include="IRepositories\ISliderRepository.cs" />
     <Compile Include="IRepositories\IMenuRepository.cs" />
@@ -67,6 +68,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Repositories\BottomMenuRepository.cs" />
+    <Compile Include="Repositories\AdminMenuRepository.cs" />
     <Compile Include="Repositories\SliderRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
@@ -90,6 +92,12 @@
     <None Include="Models\MyWebsite.dbml.layout">
       <DependentUpon>MyWebsite.dbml</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyWebsite.Domain\MyWebsite.Domain.csproj">
+      <Project>{318FC9E4-5A8D-4CE3-A991-E4AF315C6BCD}</Project>
+      <Name>MyWebsite.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

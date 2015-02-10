@@ -237,4 +237,29 @@
   <data name="HomePage" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="DisableJavascript" xml:space="preserve">
+    <value>&lt;strong&gt;JavaScript seems to be disabled in your browser.&lt;/strong&gt;&lt;br /&gt;
+                            You must have JavaScript enabled in your browser to utilize the functionality of this website.</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="StoreAddress" xml:space="preserve">
+    <value>34 New Clity 5655, Excel Tower</value>
+  </data>
+  <data name="StoreName" xml:space="preserve">
+    <value>Lingeries Store</value>
+  </data>
+  <data name="StorePhone" xml:space="preserve">
+    <value>+1 800 123 1234</value>
+  </data>
+  <data name="StoreStreet" xml:space="preserve">
+    <value>OPG Rpad, 4538FH</value>
+  </data>
+  <data name="ToTopButton" xml:space="preserve">
+    <value>To Top</value>
+  </data>
+  <data name="AdminHomePage" xml:space="preserve">
+    <value>Admin</value>
+  </data>
 </root>

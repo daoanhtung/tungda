@@ -1,0 +1,115 @@
+﻿@model MyWebsite.Areas.Admin.Models.TopMenuModel
+@using MyWebsite.Resx
+@{
+    ViewBag.Title = RsMenuManager.PageTitle;
+    Layout = "~/Areas/Admin/Views/Shared/LayoutDetail.cshtml";
+}
+<div class="page-title-bg" style="height: 126px;"></div>
+<div class="main row clearfix">
+    <div id="siteMap" class="breadcrumbs" style="position: absolute; top: 0; margin: 0;">
+    </div>
+    <br />
+    <div class="col-main">
+        <div class="product-category-title" style="margin-top: 20px;">
+            @ViewBag.Title
+        </div>
+        <div class="product-view">
+            <fieldset>
+                <table class="data-table cart-table" id="shopping-cart-table">
+                    <colgroup>
+                        <col>
+                        <col>
+                        <col>
+                        <col width="1">
+                        <col width="1">
+                    </colgroup>
+                    <thead>
+                        <tr class="first last">
+                            <th rowspan="1">@RsMenuManager.MenuText</th>
+                            <th rowspan="1">@RsMenuManager.MenuText_VI</th>
+                            <th rowspan="1">@RsMenuManager.MenuLink</th>
+                            <th rowspan="1">@RsMenuManager.Edit</th>
+                            <th colspan="1">@RsMenuManager.Delete</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr class="first last">
+                            <td class="a-right last" colspan="50">
+                                <button onclick="setLocation('http://shopper.queldorei.com/index.php/')" class="button button_white btn-continue" title="Continue Shopping" type="button"><span><span>@RsMenuManager.AddNewMenu</span></span></button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @{
+                            for (var count = 0; count < Model.Menus.Count; count++)
+                            {
+                                var menu = Model.Menus[count];
+                                if (count == 0)
+                                {
+                                    <tr class="first odd">
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText)</span></td>
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText_VI)</span></td>
+                                        <td><span class="nobr">@menu.MenuLink</span></td>
+                                        <td><a class="btn-edit btn-edit2" id="edit_@menu.MenuId" title="@RsMenuManager.Edit" menuId="@menu.MenuId" onclick="MenuManager.EditMenu(this)">@RsMenuManager.Edit</a></td>
+                                        <td><a class="btn-remove btn-remove2" id="delete_@menu.MenuId" title="@RsMenuManager.Delete" menuId="@menu.MenuId" onclick="MenuManager.DeleteMenu(this)">@RsMenuManager.Delete</a></td>
+                                    </tr>
+                                }
+                                else if (count == Model.Menus.Count - 1 && count % 2 == 0)
+                                {
+                                    <tr class="last odd">
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText)</span></td>
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText_VI)</span></td>
+                                        <td><span class="nobr">@menu.MenuLink</span></td>
+                                        <td><a class="btn-edit btn-edit2" id="edit_@menu.MenuId" title="@RsMenuManager.Edit" menuId="@menu.MenuId" onclick="MenuManager.EditMenu(this)">@RsMenuManager.Edit</a></td>
+                                        <td><a class="btn-remove btn-remove2" id="delete_@menu.MenuId" title="@RsMenuManager.Delete" menuId="@menu.MenuId" onclick="MenuManager.DeleteMenu(this)">@RsMenuManager.Delete</a></td>
+                                    </tr>
+                                }
+                                else if (count == Model.Menus.Count - 1 && count % 2 == 1)
+                                {
+                                    <tr class="last even">
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText)</span></td>
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText_VI)</span></td>
+                                        <td><span class="nobr">@menu.MenuLink</span></td>
+                                        <td><a class="btn-edit btn-edit2" id="edit_@menu.MenuId" title="@RsMenuManager.Edit" menuId="@menu.MenuId" onclick="MenuManager.EditMenu(this)">@RsMenuManager.Edit</a></td>
+                                        <td><a class="btn-remove btn-remove2" id="delete_@menu.MenuId" title="@RsMenuManager.Delete" menuId="@menu.MenuId" onclick="MenuManager.DeleteMenu(this)">@RsMenuManager.Delete</a></td>
+                                    </tr> 
+                                }
+                                else if (count % 2 == 0)
+                                {
+                                    <tr class="odd">
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText)</span></td>
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText_VI)</span></td>
+                                        <td><span class="nobr">@menu.MenuLink</span></td>
+                                        <td><a class="btn-edit btn-edit2" id="edit_@menu.MenuId" title="@RsMenuManager.Edit" menuId="@menu.MenuId" onclick="MenuManager.EditMenu(this)">@RsMenuManager.Edit</a></td>
+                                        <td><a class="btn-remove btn-remove2" id="delete_@menu.MenuId" title="@RsMenuManager.Delete" menuId="@menu.MenuId" onclick="MenuManager.DeleteMenu(this)">@RsMenuManager.Delete</a></td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    <tr class="even">
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText)</span></td>
+                                        <td><span class="nobr">@Html.Raw(menu.MenuText_VI)</span></td>
+                                        <td><span class="nobr">@menu.MenuLink</span></td>
+                                        <td><a class="btn-edit btn-edit2" id="edit_@menu.MenuId" title="@RsMenuManager.Edit" menuId="@menu.MenuId" onclick="MenuManager.EditMenu(this)">@RsMenuManager.Edit</a></td>
+                                        <td><a class="btn-remove btn-remove2" id="delete_@menu.MenuId" title="@RsMenuManager.Delete" menuId="@menu.MenuId" onclick="MenuManager.DeleteMenu(this)">@RsMenuManager.Delete</a></td>
+                                    </tr>
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+        <br/>
+    </div>
+</div>
+@section Scripts {
+    <script src="@Url.Content("~/Content/Admin/js/UserDefine/MenuManager.js")"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            MenuManager.init();
+        });
+
+    </script>
+}

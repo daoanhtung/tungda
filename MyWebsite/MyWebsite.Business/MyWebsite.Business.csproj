@@ -64,8 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdminMenuManager.cs" />
     <Compile Include="IBottomMenuManager.cs" />
     <Compile Include="Implement\BottomMenuManager.cs" />
+    <Compile Include="Implement\AdminMenuManager.cs" />
     <Compile Include="ISliderManager.cs" />
     <Compile Include="IMenuManager.cs" />
     <Compile Include="Implement\SliderManager.cs" />

@@ -15,5 +15,6 @@ namespace MyWebsite.Business
         IEnumerable<MenuResult> SelectAll();
         IEnumerable<MenuResult> SelectActive();
         IEnumerable<MenuResult> SelectDeactive();
+        List<MenuResult> SelectMenu();
     }
 }

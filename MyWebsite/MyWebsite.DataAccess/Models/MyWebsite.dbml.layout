@@ -2,12 +2,6 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="MyWebsite">
   <DataContextMoniker Name="/MyWebsiteDataContext" />
   <nestedChildShapes>
-    <classShape Id="99d8f5c8-d2fe-415c-8bf1-d89d6857fe1f" absoluteBounds="2.75, 2, 2, 1.9631982421875">
-      <DataClassMoniker Name="/MyWebsiteDataContext/Menu" />
-      <nestedChildShapes>
-        <elementListCompartment Id="c07085c7-77c7-4fe8-b6be-f35f40aa4a9d" absoluteBounds="2.765, 2.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
     <classShape Id="1aa05cb6-8043-4ffe-9090-d3a4eff16e35" absoluteBounds="0.5, 0.75, 2, 2.1554996744791666">
       <DataClassMoniker Name="/MyWebsiteDataContext/Slider" />
       <nestedChildShapes>
@@ -18,6 +12,18 @@
       <DataClassMoniker Name="/MyWebsiteDataContext/BottomMenu" />
       <nestedChildShapes>
         <elementListCompartment Id="6be534ac-2009-477d-9642-9a06292ce4c2" absoluteBounds="0.64, 4.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88141170-7728-4ac3-9ca5-3a259243131a" absoluteBounds="1.125, 6.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/MyWebsiteDataContext/AdminMenu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0085d9c2-02af-4c64-9b02-8d27d16d37e9" absoluteBounds="1.1400000000000001, 6.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6059c737-ab10-46ca-aa2b-fbcbbb8ae912" absoluteBounds="3.25, 1.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MyWebsiteDataContext/Menu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6c98fc8-37a5-4d3a-b70b-56be09b2c0ae" absoluteBounds="3.265, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

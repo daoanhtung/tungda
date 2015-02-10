@@ -20,3 +20,5 @@ C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsi
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.DataAccess\obj\Debug\MyWebsite.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.DataAccess\obj\Debug\MyWebsite.DataAccess.dll
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.DataAccess\obj\Debug\MyWebsite.DataAccess.pdb
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.DataAccess\bin\Debug\MyWebsite.Domain.dll
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite.DataAccess\bin\Debug\MyWebsite.Domain.pdb

@@ -10,6 +10,7 @@ namespace MyWebsite.Ioc
         {
             For<IMenuRepository>().Use<MenuRepository>();
             For<ISliderRepository>().Use<SliderRepository>();
+            For<IAdminMenuRepository>().Use<AdminMenuRepository>();
         }
     }
 }

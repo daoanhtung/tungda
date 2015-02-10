@@ -70,6 +70,15 @@ namespace MyWebsite.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin.
+        /// </summary>
+        public static string AdminHomePage {
+            get {
+                return ResourceManager.GetString("AdminHomePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bag.
         /// </summary>
         public static string Bag {
@@ -147,6 +156,16 @@ namespace MyWebsite.Resx {
         public static string DeliveryAndReturn {
             get {
                 return ResourceManager.GetString("DeliveryAndReturn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;strong&gt;JavaScript seems to be disabled in your browser.&lt;/strong&gt;&lt;br /&gt;
+        ///                            You must have JavaScript enabled in your browser to utilize the functionality of this website..
+        /// </summary>
+        public static string DisableJavascript {
+            get {
+                return ResourceManager.GetString("DisableJavascript", resourceCulture);
             }
         }
         
@@ -286,6 +305,15 @@ namespace MyWebsite.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Navigation.
+        /// </summary>
+        public static string Navigation {
+            get {
+                return ResourceManager.GetString("Navigation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have no items in your shopping cart..
         /// </summary>
         public static string NoItemInCart {
@@ -349,6 +377,42 @@ namespace MyWebsite.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 34 New Clity 5655, Excel Tower.
+        /// </summary>
+        public static string StoreAddress {
+            get {
+                return ResourceManager.GetString("StoreAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lingeries Store.
+        /// </summary>
+        public static string StoreName {
+            get {
+                return ResourceManager.GetString("StoreName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +1 800 123 1234.
+        /// </summary>
+        public static string StorePhone {
+            get {
+                return ResourceManager.GetString("StorePhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OPG Rpad, 4538FH.
+        /// </summary>
+        public static string StoreStreet {
+            get {
+                return ResourceManager.GetString("StoreStreet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Term And Condition.
         /// </summary>
         public static string TermAndCondition {
@@ -363,6 +427,15 @@ namespace MyWebsite.Resx {
         public static string TotalInCart {
             get {
                 return ResourceManager.GetString("TotalInCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To Top.
+        /// </summary>
+        public static string ToTopButton {
+            get {
+                return ResourceManager.GetString("ToTopButton", resourceCulture);
             }
         }
         

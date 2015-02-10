@@ -11,6 +11,7 @@ namespace MyWebsite.Domain
         public int MenuId { get; set; }
         public string MenuLink { get; set; }
         public string MenuText { get; set; }
+        public string MenuText_VI { get; set; }
         public int ParentMenuId { get; set; }
         public int MaxPerColumn { get; set; }
     }

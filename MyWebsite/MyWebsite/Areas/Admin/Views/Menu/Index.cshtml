@@ -1,0 +1,37 @@
+﻿@using System.Globalization
+@using MyWebsite.Resx
+@using MyWebsite.Utils
+
+<!-- HEADER BOF -->
+<div class="header-container">
+    <div class="header-wrapper search-field">
+        <header>
+            <div class="row clearfix">
+                <div class="grid_12 ">
+                    <h1 class="logo">
+                        <strong>@RsCommon.Logo_Title</strong>
+                        <a href="/" title="@RsCommon.Logo_Title" class="logo">
+                            <p>                                                                             
+                                <img src="@Url.Content("~/Content/Admin/images/logo/logo.png")" width="194" height="33" class="retina" alt="@RsCommon.Logo_Title" />
+                            </p>
+                        </a>
+                    </h1>
+                    <!-- NAVIGATION -->
+                    <!-- navigation BOF -->
+                    <div class="nav-container">
+                        <div class="nav-top-title">
+                            <div class="icon"><span></span><span></span><span></span></div>
+                            <a href="#">@RsCommon.Navigation</a>
+                        </div>
+                        <ul id="queldoreiNav" class="queldoreiNav">
+                        </ul>
+                    </div>
+                    <!-- navigation EOF -->
+                    <!-- NAVIGATION EOF -->
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<!-- HEADER EOF -->
+
