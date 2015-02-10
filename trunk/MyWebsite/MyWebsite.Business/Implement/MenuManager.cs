@@ -67,6 +67,11 @@ namespace MyWebsite.Business.Implement
         {
             return _menuRepository.All().Where(x=> x.Status==false).Select(ModelMapping.Map<MenuResult>).Select(Encryption.Decrypt<MenuResult>);
         }
+
+        public List<MenuResult> SelectMenu()
+        {
+            return _menuRepository.SelectMenu().Select(ModelMapping.Map<MenuResult>).ToList();
+        }
         #endregion
     }
 }

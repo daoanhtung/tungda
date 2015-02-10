@@ -10,6 +10,7 @@ namespace MyWebsite.Ioc
         {
             For<IMenuManager>().Use<MenuManager>();
             For<ISliderManager>().Use<SliderManager>();
+            For<IAdminMenuManager>().Use<AdminMenuManager>();
         }
     }
 }

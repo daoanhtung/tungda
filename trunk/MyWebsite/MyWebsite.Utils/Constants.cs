@@ -22,6 +22,9 @@ namespace MyWebsite.Utils
         public const string TotalPriceSessionKey = "TotalPrice";
         public const string Zero = "0";
         public const string SliderSessionKey = "Slider";
+        public const string AdminMenuSessionKey = "AdminMenu";
+        public const char Tab = '=';
+        public const string Space = "&nbsp;";
         #region css
 
         public const string FirstClass = " first";

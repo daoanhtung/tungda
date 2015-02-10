@@ -30,15 +30,18 @@ namespace MyWebsite.DataAccess.Models
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertMenu(Menu instance);
-    partial void UpdateMenu(Menu instance);
-    partial void DeleteMenu(Menu instance);
     partial void InsertSlider(Slider instance);
     partial void UpdateSlider(Slider instance);
     partial void DeleteSlider(Slider instance);
     partial void InsertBottomMenu(BottomMenu instance);
     partial void UpdateBottomMenu(BottomMenu instance);
     partial void DeleteBottomMenu(BottomMenu instance);
+    partial void InsertAdminMenu(AdminMenu instance);
+    partial void UpdateAdminMenu(AdminMenu instance);
+    partial void DeleteAdminMenu(AdminMenu instance);
+    partial void InsertMenu(Menu instance);
+    partial void UpdateMenu(Menu instance);
+    partial void DeleteMenu(Menu instance);
     #endregion
 		
 		public MyWebsiteDataContext() : 
@@ -71,14 +74,6 @@ namespace MyWebsite.DataAccess.Models
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Menu> Menus
-		{
-			get
-			{
-				return this.GetTable<Menu>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Slider> Sliders
 		{
 			get
@@ -94,187 +89,28 @@ namespace MyWebsite.DataAccess.Models
 				return this.GetTable<BottomMenu>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Menu")]
-	public partial class Menu : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _MenuId;
-		
-		private string _MenuLink;
-		
-		private string _MenuText;
-		
-		private System.Nullable<int> _ParentMenuId;
-		
-		private System.Nullable<bool> _Status;
-		
-		private System.Nullable<int> _MaxPerColumn;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMenuIdChanging(int value);
-    partial void OnMenuIdChanged();
-    partial void OnMenuLinkChanging(string value);
-    partial void OnMenuLinkChanged();
-    partial void OnMenuTextChanging(string value);
-    partial void OnMenuTextChanged();
-    partial void OnParentMenuIdChanging(System.Nullable<int> value);
-    partial void OnParentMenuIdChanged();
-    partial void OnStatusChanging(System.Nullable<bool> value);
-    partial void OnStatusChanged();
-    partial void OnMaxPerColumnChanging(System.Nullable<int> value);
-    partial void OnMaxPerColumnChanged();
-    #endregion
-		
-		public Menu()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int MenuId
+		public System.Data.Linq.Table<AdminMenu> AdminMenus
 		{
 			get
 			{
-				return this._MenuId;
-			}
-			set
-			{
-				if ((this._MenuId != value))
-				{
-					this.OnMenuIdChanging(value);
-					this.SendPropertyChanging();
-					this._MenuId = value;
-					this.SendPropertyChanged("MenuId");
-					this.OnMenuIdChanged();
-				}
+				return this.GetTable<AdminMenu>();
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuLink", DbType="VarChar(200)")]
-		public string MenuLink
+		public System.Data.Linq.Table<Menu> Menus
 		{
 			get
 			{
-				return this._MenuLink;
-			}
-			set
-			{
-				if ((this._MenuLink != value))
-				{
-					this.OnMenuLinkChanging(value);
-					this.SendPropertyChanging();
-					this._MenuLink = value;
-					this.SendPropertyChanged("MenuLink");
-					this.OnMenuLinkChanged();
-				}
+				return this.GetTable<Menu>();
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuText", DbType="NVarChar(1000)")]
-		public string MenuText
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Menu_SelectAll")]
+		public ISingleResult<Menu_SelectAllResult> Menu_SelectAll()
 		{
-			get
-			{
-				return this._MenuText;
-			}
-			set
-			{
-				if ((this._MenuText != value))
-				{
-					this.OnMenuTextChanging(value);
-					this.SendPropertyChanging();
-					this._MenuText = value;
-					this.SendPropertyChanged("MenuText");
-					this.OnMenuTextChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentMenuId", DbType="Int")]
-		public System.Nullable<int> ParentMenuId
-		{
-			get
-			{
-				return this._ParentMenuId;
-			}
-			set
-			{
-				if ((this._ParentMenuId != value))
-				{
-					this.OnParentMenuIdChanging(value);
-					this.SendPropertyChanging();
-					this._ParentMenuId = value;
-					this.SendPropertyChanged("ParentMenuId");
-					this.OnParentMenuIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit")]
-		public System.Nullable<bool> Status
-		{
-			get
-			{
-				return this._Status;
-			}
-			set
-			{
-				if ((this._Status != value))
-				{
-					this.OnStatusChanging(value);
-					this.SendPropertyChanging();
-					this._Status = value;
-					this.SendPropertyChanged("Status");
-					this.OnStatusChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaxPerColumn", DbType="Int")]
-		public System.Nullable<int> MaxPerColumn
-		{
-			get
-			{
-				return this._MaxPerColumn;
-			}
-			set
-			{
-				if ((this._MaxPerColumn != value))
-				{
-					this.OnMaxPerColumnChanging(value);
-					this.SendPropertyChanging();
-					this._MaxPerColumn = value;
-					this.SendPropertyChanged("MaxPerColumn");
-					this.OnMaxPerColumnChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<Menu_SelectAllResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -614,6 +450,492 @@ namespace MyWebsite.DataAccess.Models
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.AdminMenu")]
+	public partial class AdminMenu : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _AdminMenuId;
+		
+		private string _AdminMenuLink;
+		
+		private string _AdminMenuText;
+		
+		private System.Nullable<int> _ParentAdminMenuId;
+		
+		private System.Nullable<bool> _Status;
+		
+		private System.Nullable<int> _MaxPerColumn;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnAdminMenuIdChanging(int value);
+    partial void OnAdminMenuIdChanged();
+    partial void OnAdminMenuLinkChanging(string value);
+    partial void OnAdminMenuLinkChanged();
+    partial void OnAdminMenuTextChanging(string value);
+    partial void OnAdminMenuTextChanged();
+    partial void OnParentAdminMenuIdChanging(System.Nullable<int> value);
+    partial void OnParentAdminMenuIdChanged();
+    partial void OnStatusChanging(System.Nullable<bool> value);
+    partial void OnStatusChanged();
+    partial void OnMaxPerColumnChanging(System.Nullable<int> value);
+    partial void OnMaxPerColumnChanged();
+    #endregion
+		
+		public AdminMenu()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdminMenuId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int AdminMenuId
+		{
+			get
+			{
+				return this._AdminMenuId;
+			}
+			set
+			{
+				if ((this._AdminMenuId != value))
+				{
+					this.OnAdminMenuIdChanging(value);
+					this.SendPropertyChanging();
+					this._AdminMenuId = value;
+					this.SendPropertyChanged("AdminMenuId");
+					this.OnAdminMenuIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdminMenuLink", DbType="VarChar(200)")]
+		public string AdminMenuLink
+		{
+			get
+			{
+				return this._AdminMenuLink;
+			}
+			set
+			{
+				if ((this._AdminMenuLink != value))
+				{
+					this.OnAdminMenuLinkChanging(value);
+					this.SendPropertyChanging();
+					this._AdminMenuLink = value;
+					this.SendPropertyChanged("AdminMenuLink");
+					this.OnAdminMenuLinkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdminMenuText", DbType="NVarChar(1000)")]
+		public string AdminMenuText
+		{
+			get
+			{
+				return this._AdminMenuText;
+			}
+			set
+			{
+				if ((this._AdminMenuText != value))
+				{
+					this.OnAdminMenuTextChanging(value);
+					this.SendPropertyChanging();
+					this._AdminMenuText = value;
+					this.SendPropertyChanged("AdminMenuText");
+					this.OnAdminMenuTextChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentAdminMenuId", DbType="Int")]
+		public System.Nullable<int> ParentAdminMenuId
+		{
+			get
+			{
+				return this._ParentAdminMenuId;
+			}
+			set
+			{
+				if ((this._ParentAdminMenuId != value))
+				{
+					this.OnParentAdminMenuIdChanging(value);
+					this.SendPropertyChanging();
+					this._ParentAdminMenuId = value;
+					this.SendPropertyChanged("ParentAdminMenuId");
+					this.OnParentAdminMenuIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit")]
+		public System.Nullable<bool> Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaxPerColumn", DbType="Int")]
+		public System.Nullable<int> MaxPerColumn
+		{
+			get
+			{
+				return this._MaxPerColumn;
+			}
+			set
+			{
+				if ((this._MaxPerColumn != value))
+				{
+					this.OnMaxPerColumnChanging(value);
+					this.SendPropertyChanging();
+					this._MaxPerColumn = value;
+					this.SendPropertyChanged("MaxPerColumn");
+					this.OnMaxPerColumnChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Menu")]
+	public partial class Menu : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _MenuId;
+		
+		private string _MenuLink;
+		
+		private string _MenuText;
+		
+		private string _MenuText_VI;
+		
+		private System.Nullable<int> _ParentMenuId;
+		
+		private System.Nullable<bool> _Status;
+		
+		private System.Nullable<int> _MaxPerColumn;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMenuIdChanging(int value);
+    partial void OnMenuIdChanged();
+    partial void OnMenuLinkChanging(string value);
+    partial void OnMenuLinkChanged();
+    partial void OnMenuTextChanging(string value);
+    partial void OnMenuTextChanged();
+    partial void OnMenuText_VIChanging(string value);
+    partial void OnMenuText_VIChanged();
+    partial void OnParentMenuIdChanging(System.Nullable<int> value);
+    partial void OnParentMenuIdChanged();
+    partial void OnStatusChanging(System.Nullable<bool> value);
+    partial void OnStatusChanged();
+    partial void OnMaxPerColumnChanging(System.Nullable<int> value);
+    partial void OnMaxPerColumnChanged();
+    #endregion
+		
+		public Menu()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int MenuId
+		{
+			get
+			{
+				return this._MenuId;
+			}
+			set
+			{
+				if ((this._MenuId != value))
+				{
+					this.OnMenuIdChanging(value);
+					this.SendPropertyChanging();
+					this._MenuId = value;
+					this.SendPropertyChanged("MenuId");
+					this.OnMenuIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuLink", DbType="VarChar(200)")]
+		public string MenuLink
+		{
+			get
+			{
+				return this._MenuLink;
+			}
+			set
+			{
+				if ((this._MenuLink != value))
+				{
+					this.OnMenuLinkChanging(value);
+					this.SendPropertyChanging();
+					this._MenuLink = value;
+					this.SendPropertyChanged("MenuLink");
+					this.OnMenuLinkChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuText", DbType="NVarChar(1000)")]
+		public string MenuText
+		{
+			get
+			{
+				return this._MenuText;
+			}
+			set
+			{
+				if ((this._MenuText != value))
+				{
+					this.OnMenuTextChanging(value);
+					this.SendPropertyChanging();
+					this._MenuText = value;
+					this.SendPropertyChanged("MenuText");
+					this.OnMenuTextChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuText_VI", DbType="NVarChar(1000)")]
+		public string MenuText_VI
+		{
+			get
+			{
+				return this._MenuText_VI;
+			}
+			set
+			{
+				if ((this._MenuText_VI != value))
+				{
+					this.OnMenuText_VIChanging(value);
+					this.SendPropertyChanging();
+					this._MenuText_VI = value;
+					this.SendPropertyChanged("MenuText_VI");
+					this.OnMenuText_VIChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentMenuId", DbType="Int")]
+		public System.Nullable<int> ParentMenuId
+		{
+			get
+			{
+				return this._ParentMenuId;
+			}
+			set
+			{
+				if ((this._ParentMenuId != value))
+				{
+					this.OnParentMenuIdChanging(value);
+					this.SendPropertyChanging();
+					this._ParentMenuId = value;
+					this.SendPropertyChanged("ParentMenuId");
+					this.OnParentMenuIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Bit")]
+		public System.Nullable<bool> Status
+		{
+			get
+			{
+				return this._Status;
+			}
+			set
+			{
+				if ((this._Status != value))
+				{
+					this.OnStatusChanging(value);
+					this.SendPropertyChanging();
+					this._Status = value;
+					this.SendPropertyChanged("Status");
+					this.OnStatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaxPerColumn", DbType="Int")]
+		public System.Nullable<int> MaxPerColumn
+		{
+			get
+			{
+				return this._MaxPerColumn;
+			}
+			set
+			{
+				if ((this._MaxPerColumn != value))
+				{
+					this.OnMaxPerColumnChanging(value);
+					this.SendPropertyChanging();
+					this._MaxPerColumn = value;
+					this.SendPropertyChanged("MaxPerColumn");
+					this.OnMaxPerColumnChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	public partial class Menu_SelectAllResult
+	{
+		
+		private int _MenuId;
+		
+		private string _MenuText;
+		
+		private string _MenuText_VI;
+		
+		private System.Nullable<int> _ParentMenuId;
+		
+		private string _MenuLink;
+		
+		public Menu_SelectAllResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuId", DbType="Int NOT NULL")]
+		public int MenuId
+		{
+			get
+			{
+				return this._MenuId;
+			}
+			set
+			{
+				if ((this._MenuId != value))
+				{
+					this._MenuId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuText", DbType="NVarChar(4000)")]
+		public string MenuText
+		{
+			get
+			{
+				return this._MenuText;
+			}
+			set
+			{
+				if ((this._MenuText != value))
+				{
+					this._MenuText = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuText_VI", DbType="NVarChar(4000)")]
+		public string MenuText_VI
+		{
+			get
+			{
+				return this._MenuText_VI;
+			}
+			set
+			{
+				if ((this._MenuText_VI != value))
+				{
+					this._MenuText_VI = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentMenuId", DbType="Int")]
+		public System.Nullable<int> ParentMenuId
+		{
+			get
+			{
+				return this._ParentMenuId;
+			}
+			set
+			{
+				if ((this._ParentMenuId != value))
+				{
+					this._ParentMenuId = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MenuLink", DbType="VarChar(200)")]
+		public string MenuLink
+		{
+			get
+			{
+				return this._MenuLink;
+			}
+			set
+			{
+				if ((this._MenuLink != value))
+				{
+					this._MenuLink = value;
+				}
 			}
 		}
 	}
