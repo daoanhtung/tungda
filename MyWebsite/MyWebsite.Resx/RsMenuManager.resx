@@ -126,6 +126,9 @@
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="EditPage" xml:space="preserve">
+    <value>Edit Menu</value>
+  </data>
   <data name="MenuLink" xml:space="preserve">
     <value>Path</value>
   </data>
