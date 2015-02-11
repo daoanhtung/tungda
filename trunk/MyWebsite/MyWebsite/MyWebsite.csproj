@@ -391,6 +391,7 @@
     <Content Include="Content\Admin\images\footer\Shopper Home page - right column_files\player_api" />
     <Content Include="Areas\Admin\Views\MenuManager\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\LayoutDetail.cshtml" />
+    <Content Include="Areas\Admin\Views\MenuManager\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\MyWebsite.pubxml" />
   </ItemGroup>
   <PropertyGroup>

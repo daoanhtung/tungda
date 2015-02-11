@@ -63,11 +63,6 @@ namespace MyWebsite.Areas.Admin.Controllers
             return View(entity);
         }
 
-        public JsonResult Edit(string menuId)
-        {
-            return Json(String.Empty, JsonRequestBehavior.AllowGet);
-        }
-
         public JsonResult Delete(string menuId)
         {
             try
@@ -100,6 +95,12 @@ namespace MyWebsite.Areas.Admin.Controllers
             {
                 _menuManager.Delete(menu);
             }
+        }
+
+        public ActionResult Edit(int menuId)
+        {
+            var entity = _menuManager.Details(menuId);
+            return View(entity);
         }
     }
 }
