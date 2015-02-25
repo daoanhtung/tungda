@@ -1,9 +1,100 @@
-﻿@using MyWebsite.Resx
-@model MyWebsite.Domain.MenuResult
+﻿@using MyWebsite.Business.Implement
+@using MyWebsite.DataAccess.Repositories
+@using MyWebsite.Models
+@using MyWebsite.Resx
+@using MyWebsite.Utils
+@model MyWebsite.Domain.MenuDetailView
 
 @{
     ViewBag.Title = RsMenuManager.EditPage;
     Layout = "~/Areas/Admin/Views/Shared/LayoutDetail.cshtml";
 }
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="page-title-bg" style="height: 126px;"></div>
+    <div class="main row clearfix">
+        <div id="siteMap" class="breadcrumbs" style="position: absolute; top: 0; margin: 0;">
+        </div>
+        <br />
+        <div class="col-main">
+            <div class="product-category-title" style="margin-top: 20px;">
+                @ViewBag.Title<br/><br/>
+            </div>
+            @if (TempData[Constants.UpdateMenuSuccessKeySession] != null && !(bool)TempData[Constants.UpdateMenuSuccessKeySession])
+            {
+                <ul class="messages">
+                    <li class="error-msg"><ul><li><span>@RsMenuManager.SaveMenu_Error</span></li></ul></li>
+                </ul>
+            }
+            <div class="fieldset">
+                <h2 class="legend">
+                    @RsMenuManager.MenuInformation
+                </h2>
+                <ul class="form-list">
+                    <li class="wide">
+                        <label class="required"><em>*</em>@RsMenuManager.MenuText</label>
+                        <div class="input-box">
+                            @Html.TextBoxFor(model => model.Menu.MenuText, new { @class = "input-text required-entry" })
+                            @Html.MyValidationMessageFor(model => model.Menu.MenuText)
+                        </div>
+                    </li>
+                    <li class="wide">
+                        <label class="required"><em>*</em>@RsMenuManager.MenuText_VI</label>
+                        <div class="input-box">
+                            @Html.TextBoxFor(model => model.Menu.MenuText_VI, new { @class = "input-text required-entry" })
+                            @Html.MyValidationMessageFor(model => model.Menu.MenuText_VI)
+                        </div>
+                    </li>
+                    <li class="wide">
+                        <label class="required"><em>*</em>@RsMenuManager.MenuLink</label>
+                        <div class="input-box">
+                            @Html.TextBoxFor(model => model.Menu.MenuLink, new { @class = "input-text required-entry" })
+                            @Html.MyValidationMessageFor(model => model.Menu.MenuLink)
+                        </div>
+                    </li>
+                    <li class="wide">
+                        <label class="required"><em>*</em>@RsMenuManager.MaxPerColumn</label>
+                        <div class="input-box">
+                            @Html.TextBoxFor(model => model.Menu.MaxPerColumn, new { @class = "input-text required-entry", @onkeyup="Common.ValidateNumber(this)" })
+                            @Html.MyValidationMessageFor(model => model.Menu.MaxPerColumn)
+                        </div>
+                    </li>
+                    <li class="wide">
+                        <label class="required">@RsMenuManager.ParentMenu</label>
+                        <div class="input-box">
+                            @Html.DropDownListFor(model => model.Menu.ParentMenuId, new SelectList(Model.AllMenu, "MenuId", "MenuText", Model.Menu.ParentMenuId), new { @class = "validate-select" })
+                            @Html.MyValidationMessageFor(model => model.Menu.ParentMenuId)
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons-set">
+                <p class="required">
+                    *
+            @RsCommon.Required
+                </p>
+                <p class="back-link">
+                    <a href="../"><small>« </small>
+                        @RsCommon.Back
+                    </a>
+                </p>
+                <button type="submit" class="button" onclick="Common.init()">
+                    <span><span>@RsMenuManager.SaveMenu</span></span>
+                </button>
+            </div>
+            <br />
+        </div>
+    </div>
+}
 
-<h2>Edit</h2>
+@section Scripts {
+    <script src="@Url.Content("~/Content/Admin/js/UserDefine/MenuManager.js")"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            MenuManager.init();
+        });
+
+    </script>
+}

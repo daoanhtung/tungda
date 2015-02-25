@@ -86,3 +86,8 @@ C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsi
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\obj\Debug\MyWebsite.csprojResolveAssemblyReference.cache
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\obj\Debug\MyWebsite.dll
 C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\obj\Debug\MyWebsite.pdb
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\bin\System.Web.Optimization.dll
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\bin\System.Web.Optimization.xml
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\bin\Antlr3.Runtime.dll
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\bin\WebGrease.dll
+C:\Users\Anh Tung\Documents\Visual Studio 2012\Projects\tungda\MyWebsite\MyWebsite\bin\Antlr3.Runtime.pdb

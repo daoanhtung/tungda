@@ -198,7 +198,10 @@ namespace MyWebsite.Areas.Admin.Controllers
         public JsonResult GetSiteMap(string url, string title)
         {
             var siteMap = String.Empty;
-            siteMap += String.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}",
+            if (url.Contains("/Edit/"))
+            {
+                var urls = url.Split('/');
+                siteMap += String.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}{14}{15}{16}",
                 "<ul><li class=\"home\"><a href=\"/\" title=\"",
                 RsCommon.HomePage,
                 "\">",
@@ -207,9 +210,31 @@ namespace MyWebsite.Areas.Admin.Controllers
                 RsCommon.AdminHomePage,
                 "\">",
                 RsCommon.AdminHomePage,
+                "</a><span></span></li><li class=\"home\"><a href=\"/",
+                urls[1],
+                "/",
+                urls[2],
+                "\">",
+                Common.ToWord(urls[2]),
                 "</a><span></span></li><li>",
                 title,
                 "</li>");
+            }
+            else
+            {
+                siteMap += String.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}",
+                                         "<ul><li class=\"home\"><a href=\"/\" title=\"",
+                                         RsCommon.HomePage,
+                                         "\">",
+                                         RsCommon.HomePage,
+                                         "</a><span></span></li><li class=\"home\"><a href=\"/Admin/\" title=\"",
+                                         RsCommon.AdminHomePage,
+                                         "\">",
+                                         RsCommon.AdminHomePage,
+                                         "</a><span></span></li><li>",
+                                         title,
+                                         "</li>");
+            }
             return Json(siteMap, JsonRequestBehavior.AllowGet);
         }
     }

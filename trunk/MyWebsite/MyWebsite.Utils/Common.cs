@@ -291,6 +291,22 @@ namespace MyWebsite.Utils
             string result = ChangeUrl(currentUrl, Constants.LanguageQueryString, lang);
             return result;
         }
+
+        public static string ToWord(string input)
+        {
+            var output = String.Empty;
+            foreach (var character in input.ToArray())
+            {
+                if(character.ToString()==character.ToString().ToUpper())
+                {
+                    output += String.Format("{0}{1}",Constants.Space,character.ToString());
+                }else
+                {
+                    output += character.ToString();
+                }
+            }
+            return output;
+        }
         #region Sorter
 
         public static void Sort<T>(ref IQueryable<T> list, string expression, string sortDirection) where T : class

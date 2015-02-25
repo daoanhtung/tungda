@@ -129,6 +129,12 @@
   <data name="EditPage" xml:space="preserve">
     <value>Edit Menu</value>
   </data>
+  <data name="MaxPerColumn" xml:space="preserve">
+    <value>Maximum Item Per Column</value>
+  </data>
+  <data name="MenuInformation" xml:space="preserve">
+    <value>Menu Information</value>
+  </data>
   <data name="MenuLink" xml:space="preserve">
     <value>Path</value>
   </data>
@@ -140,5 +146,17 @@
   </data>
   <data name="PageTitle" xml:space="preserve">
     <value>Menu Manager</value>
+  </data>
+  <data name="ParentMenu" xml:space="preserve">
+    <value>Parent Menu</value>
+  </data>
+  <data name="SaveMenu" xml:space="preserve">
+    <value>Save Menu</value>
+  </data>
+  <data name="SaveMenu_Error" xml:space="preserve">
+    <value>There are some errors here. Please try again!</value>
+  </data>
+  <data name="SaveMenu_Success" xml:space="preserve">
+    <value>The menu has been saved.</value>
   </data>
 </root>

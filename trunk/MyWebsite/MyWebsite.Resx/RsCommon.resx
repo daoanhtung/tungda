@@ -262,4 +262,13 @@
   <data name="AdminHomePage" xml:space="preserve">
     <value>Admin</value>
   </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="RequiredAttribute" xml:space="preserve">
+    <value>&lt;div class="validation-advice"&gt;This is a required field.&lt;/div&gt;</value>
+  </data>
 </root>
