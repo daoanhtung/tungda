@@ -36,6 +36,7 @@ namespace MyWebsite.DataAccess.Repositories
             }
             catch (Exception ex)
             {
+                Logger.Log(ex.Message,false);
                 throw ex;
             }
         }
@@ -53,6 +54,7 @@ namespace MyWebsite.DataAccess.Repositories
             }
             catch (Exception ex)
             {
+                Logger.Log(ex.Message, false);
                 return new DataReturn<T> { Obj = entity, IsSuccess = false, Message = ex.StackTrace };
             }
         }
@@ -70,6 +72,7 @@ namespace MyWebsite.DataAccess.Repositories
             }
             catch (Exception ex)
             {
+                Logger.Log(ex.Message, false);
                 return new DataReturn<T> { IsSuccess = false, Message = ex.StackTrace };
             }
         }
@@ -89,6 +92,7 @@ namespace MyWebsite.DataAccess.Repositories
             }
             catch (Exception ex)
             {
+                Logger.Log(ex.Message, false);
                 return new DataReturn<T> { Obj = entity, IsSuccess = false, Message = ex.StackTrace };
             }
 
@@ -109,6 +113,7 @@ namespace MyWebsite.DataAccess.Repositories
             }
             catch (Exception ex)
             {
+                Logger.Log(ex.Message, false);
                 return new DataReturn<T> { IsSuccess = false, Message = ex.StackTrace };
             }
         }
@@ -127,6 +132,7 @@ namespace MyWebsite.DataAccess.Repositories
             }
             catch (Exception ex)
             {
+                Logger.Log(ex.Message, false);
                 return new DataReturn<T> { Obj = entity, IsSuccess = false, Message = ex.StackTrace };
             }
         }
@@ -145,6 +151,7 @@ namespace MyWebsite.DataAccess.Repositories
             }
             catch (Exception ex)
             {
+                Logger.Log(ex.Message, false);
                 return new DataReturn<T> { IsSuccess = false, Message = ex.StackTrace };
             }
         }

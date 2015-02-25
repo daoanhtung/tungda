@@ -79,6 +79,15 @@ namespace MyWebsite.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string Back {
+            get {
+                return ResourceManager.GetString("Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bag.
         /// </summary>
         public static string Bag {
@@ -355,6 +364,24 @@ namespace MyWebsite.Resx {
         public static string RemoveCart {
             get {
                 return ResourceManager.GetString("RemoveCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Required.
+        /// </summary>
+        public static string Required {
+            get {
+                return ResourceManager.GetString("Required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;div class=&quot;validation-advice&quot;&gt;This is a required field.&lt;/div&gt;.
+        /// </summary>
+        public static string RequiredAttribute {
+            get {
+                return ResourceManager.GetString("RequiredAttribute", resourceCulture);
             }
         }
         

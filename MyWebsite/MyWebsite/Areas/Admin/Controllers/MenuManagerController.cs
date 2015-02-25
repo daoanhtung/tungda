@@ -84,7 +84,7 @@ namespace MyWebsite.Areas.Admin.Controllers
             var menus = _menuManager.SelectAll().Where(x => x.ParentMenuId == menuId).ToList();
             foreach (var menuResult in menus)
             {
-                GetListDelete(menuResult.MenuId, deleteList);
+                GetListDelete((int)menuResult.MenuId, deleteList);
             }
             return deleteList;
         }
@@ -97,9 +97,44 @@ namespace MyWebsite.Areas.Admin.Controllers
             }
         }
 
-        public ActionResult Edit(int menuId)
+        public ActionResult Edit(int Id)
         {
-            var entity = _menuManager.Details(menuId);
+            var menu = _menuManager.Details(Id);
+            var allMenu = _menuManager.SelectMenu().Where(x => x.MenuId != Id).ToList();
+            var defaultMenu = new MenuResult
+                                  {
+                                      MenuText = "Please select"
+                                  };
+            allMenu.Insert(0,defaultMenu);
+            var entity = new MenuDetailView
+                             {
+                                 AllMenu = allMenu,
+                                 Menu = menu
+                             };
+            return View(entity);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(MenuDetailView entity, int Id)
+        {
+            if (ModelState.IsValid)
+            {
+                entity.Menu.MenuId = Id;
+                var result = _menuManager.Edit(entity.Menu);
+                if (result.IsSuccess)
+                {
+                    Session[Constants.UpdateMenuSuccessKeySession] = true;
+                    return RedirectToAction("Index", "MenuManager");
+                }
+            }
+            var allMenu = _menuManager.SelectMenu().Where(x => x.MenuId != Id).ToList();
+            var defaultMenu = new MenuResult
+            {
+                MenuText = "Please select"
+            };
+            allMenu.Insert(0, defaultMenu);
+            entity.AllMenu = allMenu;
+            TempData[Constants.UpdateMenuSuccessKeySession] = false;
             return View(entity);
         }
     }

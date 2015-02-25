@@ -57,6 +57,7 @@
     <Compile Include="CompareItemResult.cs" />
     <Compile Include="AdminMenuResult.cs" />
     <Compile Include="CustomAttribute\EditAttribute.cs" />
+    <Compile Include="MenuDetailView.cs" />
     <Compile Include="MenuResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SelectMenuResult.cs" />

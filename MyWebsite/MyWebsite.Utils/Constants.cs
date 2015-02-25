@@ -25,6 +25,7 @@ namespace MyWebsite.Utils
         public const string AdminMenuSessionKey = "AdminMenu";
         public const char Tab = '=';
         public const string Space = "&nbsp;";
+        public const string UpdateMenuSuccessKeySession = "UpdateMenuSuccess";
         #region css
 
         public const string FirstClass = " first";
